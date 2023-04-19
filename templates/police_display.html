@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Police Details</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href=" {{ url_for('static', filename='/assets/css/meyawo.css') }}">
+</head>
+<body >
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="500">
+        <div class="container">
+
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" style="font-size: 30px" href="{{ url_for('index_police') }}">Home</a>
+                </li>
+                 <li class="item" >
+                    <a class="link" style="font-size: 30px" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="header-content container">
+            <center>
+            <h1 style="color: black;">
+                {{row1['name']}}
+            </h1>
+            <br>
+                <h4>Phone No.: {{row1['phn']}}</h4>
+                 <h4>Address : {{row1['addr']}}</h4>
+                 <h4>Email : {{row1['email']}}</h4>
+             <h4 > Gender : {{row1['gender']}}</h4>
+             <h4>Date of Birth : {{row1['DOB']}}</h4>
+                <br><br>
+             <h4 style="color: black;">Emergency Contact</h4>
+             <h4>Name : {{row1['ename']}}</h4>
+             <h4>Relation : {{row1['relation']}}</h4>
+             <h4>Phone No. : {{row1['phone']}}</h4>
+</center>
+        </div>
+    </header><!-- end of page header -->
+
+
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+
+	<!-- core  -->
+    <script src= " {{ url_for('static', filename='assets/vendors/jquery/jquery-3.4.1.js') }} "></script>
+    <script src=" {{ url_for('static', filename='assets/vendors/bootstrap/bootstrap.bundle.js') }} "></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src=" {{ url_for('static', filename='assets/vendors/bootstrap/bootstrap.affix.js') }} "></script>
+
+    <!-- Meyawo js -->
+    <script src=" {{ url_for('static', filename='assets/js/meyawo.js') }} "></script>
+
+</body>
+</html>
